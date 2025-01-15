@@ -19,7 +19,7 @@ function Login() {
                 
             </form>
         </div>
-    ); // 집 가고싶다 알바 가기 싫다 시발
+    );
 }
 
 export default Login; // Login 컴포넌트 다른 파일에서 사용 가능하도록 내보내기
