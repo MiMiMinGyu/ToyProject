@@ -16,3 +16,5 @@ function App() { // 최상위 컴포넌트, 라우팅 설정 관리
 }
 
 export default App; // App 컴포넌트 다른 파일에서 사용 가능하도록 내보내기
+
+// B 기능
