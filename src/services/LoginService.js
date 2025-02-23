@@ -18,7 +18,9 @@ try {
     const data = await response.json(); // JSON 형태로 변환
 
     return data;
-    } catch (error) {
+    } 
+    
+    catch (error) {
         console.error("로그인 요청 실패", error);
         return { success: false, message: "오류가 발생했습니다." };
     }

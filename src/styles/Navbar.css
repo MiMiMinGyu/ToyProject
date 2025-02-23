@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 로고와 메뉴 간격 띄우기 */
+    align-items: center;
+    background-color: #1a1b1e; /* 배경색 */
+    color: grey;
+    padding: 0px 20px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.navbar-link {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: white;
+}
