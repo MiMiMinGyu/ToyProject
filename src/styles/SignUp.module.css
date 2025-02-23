@@ -1,21 +1,15 @@
-* { /* 모든 요소에 적용 */
-    box-sizing: border-box;
-}
-
-.login-title { /* 로그인 제목 스타일 */
-    color: rgb(13, 113, 235);
-    font-size: 45px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.login-container { /* 로그인 컨테이너 스타일 */
-    background-color: white;
+.signup-container { /* 로그인 컨테이너 스타일 */
     width: 500px;
     max-width: 90%; /* 최대 너비, 창 크기에 따라 자동 조정 90% */
     margin: 80px auto;
     padding: 40px;
-    text-align: center;/ /* 텍스트 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.signup-title { /* 로그인 제목 스타일 */
+    color: rgb(13, 113, 235);
+    font-size: 45px;
+    margin-bottom: 60px;
 }
 
 form {
@@ -37,7 +31,7 @@ label {
     padding: 0 4px;
     font-size: 14px;
     font-weight: 600;
-    color: black;
+    color: white;
     transition: all 0.3s ease; /* 모든 속성에 0.3초의 시간을 줌 */
 }
 
@@ -45,7 +39,6 @@ input {
     width: 100%;
     padding: 10px 4px;
     font-size: 16px; 
-    margin-bottom: 14px;
     border: none;
     border-bottom: 2px solid #ccc;
     outline: none; /* 포커스 시 테두리 제거 */
@@ -76,13 +69,18 @@ form button:hover { /* hover는 마우스를 올렸을 때 적용되는 상태�
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 @media (max-width: 768px) { /* 미디어 쿼리, 조건과 조건에 해당할 때 적용될 css (화면 너비가 768px 이하인 경우) */
-    .login-title {
+    .signup-title {
         font-size: 45px;
         margin-bottom: 70px;
     }
 
-    .login-container {
+    .signup-container {
         width: 100%; 
         padding: 15px;
     }

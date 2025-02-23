@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../services/LoginService'; // LoginService.js 파일에서 login 함수 가져오기
-import '../styles/Login.css';
+import styles from '../styles/Login.module.css';
 
 function Login() {
 
     const [userId, setUserId] = React.useState(''); // userId 상태 생성
     const [password, setPassword] = React.useState(''); // password 상태 생성
+    const navigate = useNavigate(); // useNavigate 훅 사용
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // 기본 동작 방지
@@ -21,21 +23,24 @@ function Login() {
     };
 
     return (
-        <div className = "login-container"> {/* CSS 클래스 추가 */}
-            <h1 className = "login-title"> Login </h1> {/* CSS 클래스 추가 */}
+        <div className = {styles["login-container"]}> {/* CSS 클래스 추가 */}
+            <h1 className = {styles["login-title"]}> Login </h1> {/* CSS 클래스 추가 */}
             <form onSubmit = {handleSubmit}> {/* form 요소에 이벤트 추가 */}
-                <div className = "input-group">
-                    <label htmlFor = "userId"> 아이디 </label>
+                <div className = {styles["input-group"]}>
+                    <label htmlFor = "userId" className = {styles.label}> 아이디 </label>
                     <input type = "text" id = "userId" placeholder = " " value = {userId} onChange = {(e) => setUserId(e.target.value)} required /> {/* placeholder로 빈 상태 확인 */}
                 </div>
 
-                <div className = "input-group">
-                    <label htmlFor = "password"> 비밀번호 </label>
+                <div className = {styles["input-group"]}>
+                    <label htmlFor = "password" className = {styles.label}> 비밀번호 </label>
                     <input type = "password" id = "password" placeholder = " " value = {password} onChange = {(e) => setPassword(e.target.value)} required />
                 </div>
 
-                <button type = "submit"> Login </button>
+                <button type = "submit" className = {styles.button}> Login </button>
                 
+                <div className = {styles["signup-link"]}>
+                    <span className = {styles["signup-link"]} onClick = {() => navigate('/signup')}> 회원가입 </span>
+                </div>
             </form>
         </div>
     );
