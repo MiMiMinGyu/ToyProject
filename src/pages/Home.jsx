@@ -2,16 +2,21 @@
 // import { useNavigate } from 'react-router-dom';
 // import { createPost } from '../services/CreatPostService';
 // import { getPost } from '../services/PostService';
-import '../styles/Home.css';
 import Navbar from '../components/Navbar';
+import Category from '../components/Category';
+import '../styles/Home.css';
 
 function Home() {
     return (
-        <div className = "home-container">
+        <>
             <Navbar />
-            
-            
-        </div>
+            <div className = "home-container">
+                <Category />
+                <div className = "main-content">
+                
+                </div>
+            </div>
+        </>
     );
 }
 
