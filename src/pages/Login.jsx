@@ -15,10 +15,10 @@ function Login() {
         const result = await login(userId, password); // 로그인 요청
 
         if (result.success) {
-            window.alert('환영합니다.'); 
+            window.alert("환영합니다."); 
         }
         else {
-            window.alert('로그인에 실패했습니다\n아이디 혹은 비밀번호를 확인해주세요.');
+            window.alert("로그인에 실패했습니다\n아이디 혹은 비밀번호를 확인해주세요.");
         }
     };
 

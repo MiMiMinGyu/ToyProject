@@ -1,7 +1,26 @@
-body {
-    margin: 0;
-    padding: 0;
+.home-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 50px); /* Navbar 높이만큼 뺀 나머지 높이 */
+    margin-top: 50px; /* Navbar 높이만큼 떨어지게 */
 }
 
+.category-container {
+    position: sticky; /* 스크롤 시 고정 */
+    top: 50px;
+    height: calc(100vh - 50px); /* 100% - 상단으로부터의 위치, 스크롤바를 사용하므로 height 지정 */
+    width: 20%; /* 화면비 2만큼의 영역 */
+    min-width: 250px;
+    padding: 20px;
+    overflow-y: auto; /* 세로 스크롤바 */
 
+    margin: 30px 0px 0px 30px /* 시계방향, 위 오른쪽 아래 왼쪽 순*/
+}
 
+.main-content {
+    flex: 1; /* 남은 영역 모두 차지 */
+    padding: 20px;
+    overflow-y: auto; /* 세로 스크롤바 */
+    height: calc(100vh - 60px);
+}
+  

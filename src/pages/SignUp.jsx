@@ -16,12 +16,12 @@ function SignUp() {
         event.preventDefault();
 
         if(signUpPassword !== confirmPassword) {
-            window.alert('비밀번호가 일치하지 않습니다.');
+            window.alert("비밀번호가 일치하지 않습니다.");
             return;
         }
 
         // 회원가입 요청
-        navigate('/login');
+        navigate("/login");
     }
 
     return (
